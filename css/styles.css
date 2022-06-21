@@ -20,186 +20,61 @@ a{
     text-decoration: none;
 }
 
-header{
-    grid-row-start: 1;
-    grid-row-end: 2;
-    background-color: #01bdfc;
-    position: static;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-    align-items: stretch;
-    height: 7rem;
-    
-}
-
-
 footer{
     background-color: rgb(41, 48, 50);
 }
 
+/* header */
+header .navbar{
+    text-align: center;
+    background: #01bdfc;
+}
+#redesSociales{
+    width: auto;
+    color: rgb(0,0,0);
+}
 
-/*  CSS del header */
-.hover-underline-animation {
-    display: inline-block;
-    position: relative;
-  }
-
-.hover-underline-animation:after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: black;
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
+#mainNavigation ul{
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+#redesSociales .row .col-auto a i:hover{
+    transform: scale(1.4);
+    color: black;
+}
+.mainNavigation ul li {
+    margin-left: 15px;
   }
   
-  .hover-underline-animation:hover:after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-  }
-
-.logo{
-    display: inline-block;
-    margin: auto 0 auto 0;
-}
-
-.logo h1{
+  #logo h1 {
     font-weight: 700;
     font-size: 3rem;
-}
+  }
+  
+  #logo {
+    padding-left: 30px;
+  }
+  
+  #index{
+      background-color: white;
+  }
 
-.redesSociales{
+@media (max-width: 994px) 
+{
+  #redesSociales {
     display: none;
-}
-.mainNavigation ul{
-    margin-bottom: 20px;
-}
-.mainNavigation ul li{
-    list-style: none;
-    display: inline-block;
-    justify-content: space-evenly;
-    width: 7rem;
-    text-align: center;
-    font-size: 1.1rem;
-    padding: 0;
+  }
 }
 
 
+/* CSS MAIN MOBILE INDEX */
 
-@media screen and (min-width:600px) {
-    .logo{
-        display: inline-block;
-        margin: auto 0 auto 0;
-    }
-
-    .logo h1{
-        font-weight: 700;
-        font-size: 3rem;
-    }
-
-
-    .mainNavigation{
-        display: inline-block;
-        margin: auto 0 auto 0;
-    }
-    .mainNavigation ul{
-        margin-bottom: 0px;
-    }
-    .mainNavigation ul li{
-        list-style: none;
-        display: inline-block;
-        justify-content: space-evenly;
-        width: 7rem;
-        text-align: center;
-        font-size: 1.1rem;
-        padding: 0;
-    }
-
-    .redesSociales{
-        display: none;
-        position: relative;
-        margin: auto 0 auto 0;
-        width: 15rem;
-    }
-
-    .social{
-        margin: 0 8px 0 8px;
-        font-size: 1.5rem;
-    }
-
-
-
-
-}
-
-@media screen and (min-width:1024px) {
-
-    .logo{
-        display: inline-block;
-        margin: auto 0 auto 0;
-    }
-
-    .logo h1{
-        font-weight: 700;
-        font-size: 3rem;
-    }
-
-
-    .mainNavigation{
-        display: inline-block;
-        margin: auto 0 auto 0;
-    }
-
-    .mainNavigation ul li{
-        list-style: none;
-        display: inline-block;
-        justify-content: space-evenly;
-        width: 7rem;
-        text-align: center;
-        font-size: 1.1rem;
-        padding: 0;
-    }
-
-    .redesSociales{
-        display: inline-block;
-        position: relative;
-        margin: auto 0 auto 0;
-        width: 15rem;
-    }
-
-    .social{
-        margin: 0 8px 0 8px;
-        font-size: 1.5rem;
-    }
-}
-
-/* CSS MAIN MOBILE INDEX  */
-
-main{
-    grid-row-start: 2;
-    grid-row-end: 3;
-    display: grid;
-    grid-template-areas: "texto" "imagen" "ultimos";
-    justify-content: center;
-    align-content: center;
-    padding: 50px 0;
-    background-color: rgb(0, 146, 194);
-    
-}
 
 .contenedorImagen{
     grid-area: imagen;
     margin: 0;
     
 }
-
-
-    
 
 .contenedorTexto{
     grid-area: texto;
@@ -283,19 +158,7 @@ main{
 
 /* MAIN TABLET */
 @media screen and (min-width:600px) {
-
-    main{
-        grid-row-start: 2;
-        grid-row-end: 3;
-        display: grid;
-        grid-template-areas: "texto" "imagen" "ultimos";
-        justify-content: center;
-        align-content: center;
-        padding: 50px 0;
-        background-color: rgb(0, 146, 194);
-        
-    }
-    
+   
     .contenedorImagen{
         grid-area: imagen;
         margin: 0 auto;
@@ -391,28 +254,13 @@ main{
 /* MAIN DESKTOP */
 @media screen and (min-width:1024px) {
 
-    main{
-        grid-row-start: 2;
-        grid-row-end: 3;
-        display: grid;
-        grid-template-areas: "imagen texto"
-        "imagen ultimo";
-        justify-content: center;
-        align-content: center;
-        padding: 50px;
-        background-color: rgb(0, 146, 194);
-        
-    }
 
     .contenedorImagen{
         grid-area: imagen;
         margin-left: 20rem;
     }
 
-    .mainPhoto{
-        margin: auto auto;
-        
-    }
+    
         
 
     .contenedorTexto{
@@ -473,6 +321,7 @@ main{
     .thumbnails{
         display: flex;
         justify-content: left;
+        flex-direction: row;
     }
     .trabajoThumbnail{
         border: 1px solid #ddd;
@@ -492,21 +341,10 @@ main{
         text-align: left;
     }
 }
-/* CSS del Footer */
+/* CSS del Footer */ 
 
-footer{
-    grid-row-start: 3;
-    grid-row-end: 4;
-    height: 250px;
-
-}
 
 footer ul{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    height: 150px;
-    list-style: none;
     color:antiquewhite;
 
 }
@@ -528,44 +366,8 @@ footer ul{
     margin-left: 15px;
     font-size: 3rem;
 }
-/* CSS FOOTER TABLET*/
-@media screen and (min-width:600px){
 
-    footer{
-        grid-row-start: 3;
-        grid-row-end: 4;
-        height: 250px;
-    
-    }
-    
-    footer ul{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        height: 150px;
-        list-style: none;
-        color:antiquewhite;
-    
-    }
-    
-    .footerInfo{
-        text-decoration: none;
-        margin: auto 0 auto;
-        color: antiquewhite;
-        text-align: center;
-    
-    }
-    .redesSociales_footer{
-        display: flex;
-        justify-content: center;
-        padding: 1rem;
-    }
-    .redesSociales_footer a{
-        color: whitesmoke;
-    }
-
-}
-/* CSS FOOTER DESKTOP*/
+/* CSS FOOTER DESKTOP */
 @media screen and (min-width:1024px) {
 
     footer{
@@ -594,25 +396,16 @@ footer ul{
     }
     .redesSociales_footer{
         display: none;
+        width: auto;
+        color: rgb(255,255,255);
+        margin: 0px;
+        margin-top: 0px;
+        padding-top: 20px;
     }
+
 }
 
 /* Main BLOG css */
-
-.blog{
-    margin: 5% 5%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-
-}
-
-.blog_post{
-    margin: 5% 0;
-    justify-content: center;
-
-}
-
 
 .blog_title{
     margin-top: 15px;
@@ -622,82 +415,9 @@ footer ul{
     margin-top: 5px;
 }
 
-.blog_parrafo{
-    margin-top: 15px;
-    
-}
 .ampliarPost{
     color: rgb(1, 189, 252);
 }
-
-
-@media screen and (min-width:600px) {
-
-    .blog{
-        margin: 5% 5%;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-
-    }
-
-    .blog_post{
-        margin: 5% 0;
-        justify-content: center;
-
-    }
-    
-    .blog_title{
-        margin-top: 15px;
-    }
-
-    .blog_date{
-        margin-top: 5px;
-    }
-
-    .blog_parrafo{
-        margin-top: 15px;
-        
-    }
-    .ampliarPost{
-        color: rgb(1, 189, 252);
-    }
-
-}
-
-@media screen and (min-width:1024px) {
-
-    .blog{
-        margin: 2rem 20%;
-        display: flex;
-        justify-content: space-around;
-        flex-direction: row;
-    }
-
-    .blog_post{
-        margin: 5%;
-
-    }
-
-    .blog_title{
-        margin-top: 15px;
-    }
-
-    .blog_date{
-        margin-top: 5px;
-    }
-
-    .blog_parrafo{
-        margin-top: 15px;
-        width: 100%;
-    }
-    .ampliarPost{
-        color: rgb(1, 189, 252);
-    }
-
-}
-
-
 
 
 /* Contacto CSS */
@@ -887,12 +607,14 @@ footer ul{
 /* MAIN PORTFOLIO MOBILE */
 
 
+
 #mainPortfolio{
     height: 100%;
     margin: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-color: rgb(0, 146, 194);
 
 }
 
